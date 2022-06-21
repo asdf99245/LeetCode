@@ -11,7 +11,7 @@
  * @return {number}
  */
 const sumOfLeftLeaves = function(root) {
-    if(root.val === undefined) {
+    if(!root) {
         return 0;
     }
     
