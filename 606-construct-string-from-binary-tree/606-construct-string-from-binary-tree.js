@@ -14,13 +14,12 @@ const tree2str = function(root) {
     if(!root) {
         return "";
     }
-    // console.log(root, root.left, root.right);
     let str = `${root.val}`
     
-    if(root.right) {
+    if(root.right) { // right child가 있으면 left, right 둘 다 표시
         str += `(${tree2str(root.left)})(${tree2str(root.right)})`;
-    }
-    else if(root.left) str += `(${tree2str(root.left)})`;
+    } 
+    else if(root.left) str += `(${tree2str(root.left)})`; // left child만 있을 때
     
     return str;
 };
