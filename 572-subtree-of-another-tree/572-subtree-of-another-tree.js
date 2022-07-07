@@ -29,8 +29,7 @@ const isSubtree = function(root, subRoot) {
         ret = isEqual(root, subRoot);
     }
     
-    ret |= isSubtree(root.left, subRoot);
-    ret |= isSubtree(root.right, subRoot);
+    ret |= isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     
     return ret;
 };
