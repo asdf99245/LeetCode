@@ -13,8 +13,7 @@
  */
 const isEqual = (root, subRoot) => {
     if(!subRoot && !root) return true;
-    else if(!subRoot && root) return false;
-    else if(subRoot && !root) return false;
+    else if((!subRoot && root) || (subRoot && !root)) return false;
     
     if(root.val !== subRoot.val) return false;
     
