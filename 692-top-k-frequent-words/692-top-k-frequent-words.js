@@ -17,8 +17,6 @@ const topKFrequent = function(words, k) {
         const first = cnt_map.get(a), second = cnt_map.get(b);
         return second - first;
     })
-    
-    console.log(words);
-    
+
     return words.slice(0, k);
 };
